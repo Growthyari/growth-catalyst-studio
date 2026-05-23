@@ -59,20 +59,19 @@ function Index() {
   return (
     <>
       {/* HERO */}
-      <section className="relative pt-32 md:pt-44 pb-20 md:pb-28 overflow-hidden">
+      <section className="relative pt-32 md:pt-40 pb-20 md:pb-28 overflow-hidden">
         <div className="container-editorial">
           <div className="fade-up">
             <SectionLabel index="GY/01">Studio · Delhi → UK · USA · Canada</SectionLabel>
           </div>
-          <h1 className="mt-8 text-[15vw] md:text-[10.5rem] leading-[0.88] tracking-[-0.04em] fade-up fade-up-delay-1">
+          <h1 className="mt-10 max-w-[18ch] text-[12vw] sm:text-7xl md:text-[7.5rem] lg:text-[9rem] leading-[0.92] fade-up fade-up-delay-1">
             More clients.
             <br />
             <span className="text-muted-foreground">Less </span>
-            <span className="italic font-display">chasing</span>
-            <span className="text-primary">.</span>
+            <span className="serif-italic text-primary">chasing.</span>
           </h1>
-          <div className="mt-12 grid gap-10 md:grid-cols-12 fade-up fade-up-delay-2">
-            <p className="md:col-span-7 text-lg md:text-xl text-foreground/80 max-w-2xl leading-relaxed">
+          <div className="mt-14 grid gap-10 md:grid-cols-12 fade-up fade-up-delay-2">
+            <p className="md:col-span-7 text-lg md:text-xl text-foreground/75 measure leading-[1.55]">
               We build AI websites, voice agents, automations and business development systems for founder-led businesses in the UK, USA and Canada — shipped fast, built properly, and designed to convert.
             </p>
             <div className="md:col-span-5 md:justify-self-end flex flex-col gap-3">
@@ -101,9 +100,9 @@ function Index() {
               { k: "UK · US · CA", v: "Markets we serve" },
               { k: "Live", v: "Systems and demos" },
             ].map((t) => (
-              <div key={t.v} className="bg-paper p-6">
-                <p className="font-display text-3xl md:text-4xl">{t.k}</p>
-                <p className="mt-2 label-mono text-muted-foreground">{t.v}</p>
+              <div key={t.v} className="bg-paper p-6 md:p-8">
+                <p className="font-display text-3xl md:text-[2.5rem] leading-none">{t.k}</p>
+                <p className="mt-3 label-mono text-muted-foreground">{t.v}</p>
               </div>
             ))}
           </div>
@@ -141,18 +140,18 @@ function Index() {
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
           <div>
             <SectionLabel index="GY/02">Selected work</SectionLabel>
-            <h2 className="mt-4 text-5xl md:text-7xl">
+            <h2 className="mt-6 text-5xl md:text-[5.5rem] leading-[0.95] max-w-[14ch]">
               Real builds.
               <br />
-              <span className="text-muted-foreground">Live systems. Clear outcomes.</span>
+              <span className="serif-italic text-muted-foreground">Live systems.</span>
             </h2>
           </div>
           <Link to="/work" className="label-mono text-foreground/80 hover:text-primary transition-colors">
             All work →
           </Link>
         </div>
-        <div className="mt-16 grid gap-12 md:gap-16 md:grid-cols-2">
-          {projects.map((p) => (
+        <div className="mt-16 grid gap-14 md:gap-16 md:grid-cols-2">
+          {projects.slice(0, 4).map((p) => (
             <WorkCard
               key={p.slug}
               image={p.image}
@@ -161,19 +160,13 @@ function Index() {
               location={p.location}
               summary={p.summary}
               tag={p.tag}
+              url={(p as { url?: string }).url}
             />
           ))}
-          {/* fourth card */}
-          <Link
-            to="/contact"
-            className="lift group block rounded-sm border hairline p-8 md:p-10 bg-surface flex flex-col justify-between min-h-[360px]"
-          >
-            <span className="label-mono text-muted-foreground">Open slot</span>
-            <div>
-              <h3 className="font-display text-3xl md:text-4xl">Your project here.</h3>
-              <p className="mt-3 text-muted-foreground">We add new proof every month. Yours could be next.</p>
-              <p className="mt-6 label-mono text-primary group-hover:underline">Start a brief →</p>
-            </div>
+        </div>
+        <div className="mt-12 text-center">
+          <Link to="/work" className="inline-flex items-center gap-2 label-mono text-primary hover:underline">
+            See all 5 builds →
           </Link>
         </div>
       </Section>
@@ -181,13 +174,12 @@ function Index() {
       {/* SERVICES PREVIEW */}
       <Section className="border-t hairline">
         <SectionLabel index="GY/03">What we build</SectionLabel>
-        <div className="mt-10 grid md:grid-cols-2 gap-12">
-          <h2 className="text-5xl md:text-7xl leading-[0.9]">
+        <div className="mt-10 grid md:grid-cols-12 gap-12 items-end">
+          <h2 className="md:col-span-7 text-5xl md:text-[5.5rem] leading-[0.95]">
             Four services.<br />
-            One outcome:<br />
-            <span className="italic text-primary">growth.</span>
+            One outcome: <span className="serif-italic text-primary">growth.</span>
           </h2>
-          <div className="self-end max-w-md text-lg text-foreground/80">
+          <div className="md:col-span-5 measure text-lg text-foreground/75 leading-relaxed">
             Each service is a working system. Not a deliverable. Not a deck. Something live, in your business, doing the job.
           </div>
         </div>
@@ -199,8 +191,8 @@ function Index() {
               className="group bg-paper p-8 md:p-12 hover:bg-surface transition-colors flex flex-col gap-4"
             >
               <span className="label-mono text-muted-foreground">{s.n}</span>
-              <h3 className="text-3xl md:text-4xl">{s.title}</h3>
-              <p className="text-foreground/75">{s.copy}</p>
+              <h3 className="text-[28px] md:text-[34px] leading-tight">{s.title}</h3>
+              <p className="text-foreground/70 leading-relaxed">{s.copy}</p>
               <span className="mt-auto label-mono text-foreground/70 group-hover:text-primary transition-colors">Read more →</span>
             </Link>
           ))}
@@ -210,15 +202,15 @@ function Index() {
       {/* HOW IT WORKS */}
       <Section dark>
         <SectionLabel index="GY/04" dark>How it works</SectionLabel>
-        <h2 className="mt-6 text-5xl md:text-7xl">
+        <h2 className="mt-6 text-5xl md:text-[5.5rem] leading-[0.95] max-w-[18ch]">
           From first call to live system.<br />
-          <span className="text-night-foreground/55">In days, not quarters.</span>
+          <span className="serif-italic text-night-foreground/60">In days, not quarters.</span>
         </h2>
         <div className="mt-16 grid md:grid-cols-4 gap-px bg-white/10 border border-white/10 rounded-sm overflow-hidden">
           {steps.map((s) => (
             <div key={s.n} className="bg-night p-8 md:p-10 flex flex-col gap-4">
               <span className="label-mono text-electric">{s.n}</span>
-              <h3 className="text-2xl md:text-[28px]">{s.title}</h3>
+              <h3 className="text-2xl md:text-[26px] leading-tight">{s.title}</h3>
               <p className="text-night-foreground/70 text-sm leading-relaxed">{s.copy}</p>
             </div>
           ))}
@@ -231,7 +223,7 @@ function Index() {
         <div className="mt-12 grid md:grid-cols-3 gap-8">
           {testimonials.map((t, i) => (
             <figure key={i} className="border-t hairline pt-8">
-              <blockquote className="text-xl md:text-2xl leading-snug font-display tracking-tight">
+              <blockquote className="serif-italic text-[26px] md:text-[28px] leading-[1.2] text-foreground">
                 “{t.quote}”
               </blockquote>
               <figcaption className="mt-6 label-mono text-muted-foreground">
@@ -246,7 +238,7 @@ function Index() {
       <Section className="border-t hairline">
         <div className="grid md:grid-cols-12 gap-10 items-center">
           <div className="md:col-span-5">
-            <div className="rounded-sm overflow-hidden bg-surface aspect-[4/5] max-w-md">
+            <div className="rounded-sm overflow-hidden bg-surface aspect-[4/5] max-w-sm">
               <img
                 src={founderImg}
                 alt="Akash Chaudhury, founder of GrowthYari Studio"
@@ -259,10 +251,10 @@ function Index() {
           </div>
           <div className="md:col-span-7">
             <SectionLabel index="GY/06">Founder-led</SectionLabel>
-            <h2 className="mt-6 text-4xl md:text-6xl">
-              You'll work with Akash. Not an account manager.
+            <h2 className="mt-6 text-4xl md:text-[3.75rem] leading-[1.02] max-w-[18ch]">
+              You'll work with Akash. <span className="serif-italic text-muted-foreground">Not an account manager.</span>
             </h2>
-            <p className="mt-6 text-lg text-foreground/80 max-w-xl">
+            <p className="mt-6 text-lg text-foreground/75 measure leading-relaxed">
               Every brief is read by the founder. Every build is shipped by the founder. That's the entire promise — and it's the reason things actually ship in 72 hours.
             </p>
             <Link
@@ -277,13 +269,13 @@ function Index() {
 
       {/* CLOSING CTA */}
       <section className="bg-night text-night-foreground">
-        <div className="container-editorial py-24 md:py-40 text-center">
+        <div className="container-editorial py-24 md:py-36 text-center">
           <SectionLabel index="GY/07" dark><span className="md:mx-auto">Ready when you are</span></SectionLabel>
-          <h2 className="mt-8 text-6xl md:text-[10rem] leading-[0.9]">
+          <h2 className="mt-10 text-6xl md:text-[8rem] leading-[0.95]">
             Let's ship<br />
-            <span className="italic text-electric">something real.</span>
+            <span className="serif-italic text-electric">something real.</span>
           </h2>
-          <p className="mt-8 max-w-xl mx-auto text-night-foreground/70">
+          <p className="mt-8 max-w-xl mx-auto text-night-foreground/70 leading-relaxed">
             First call is free. No pitch. Just strategy. If we're a fit, we start the 72-hour clock.
           </p>
           <Link

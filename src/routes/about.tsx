@@ -27,10 +27,8 @@ function AboutPage() {
       <section className="pt-36 md:pt-48 pb-16 border-b hairline">
         <div className="container-editorial">
           <SectionLabel index="GY/About">The studio</SectionLabel>
-          <h1 className="mt-8 text-6xl md:text-[9rem] leading-[0.9]">
-            We don't build<br />
-            websites.<br />
-            <span className="italic text-primary">We build growth systems.</span>
+          <h1 className="mt-10 text-6xl md:text-[7.5rem] leading-[0.95] max-w-[15ch]">
+            We don't build websites. <span className="serif-italic text-primary">We build growth systems.</span>
           </h1>
         </div>
       </section>

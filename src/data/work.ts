@@ -1,6 +1,8 @@
 import smile from "@/assets/work-smile-district.jpg";
 import peak from "@/assets/work-peak-home.jpg";
 import carry from "@/assets/work-carrymore.jpg";
+import abuja from "@/assets/work-abuja.jpg";
+import goedmo from "@/assets/work-goedmo.jpg";
 import voice from "@/assets/voice-agent-demo.jpg";
 import auto from "@/assets/automation-flow.jpg";
 import bd from "@/assets/bd-pipeline.jpg";
@@ -15,6 +17,7 @@ export const projects = [
     location: "London, UK",
     summary: "A clean, conversion-first dental site with online booking and AI follow-up.",
     tag: "Sample build" as const,
+    url: "https://smile-district-care.lovable.app",
     challenge:
       "An outdated clinic site that buried booking three clicks deep and lost a third of mobile visitors before the first scroll.",
     built:
@@ -32,6 +35,7 @@ export const projects = [
     location: "Toronto, Canada",
     summary: "A trades-friendly website with 24/7 voice agent answering missed calls.",
     tag: "Sample build" as const,
+    url: "https://peakhomeservices.lovable.app",
     challenge:
       "A four-truck plumbing & HVAC operator missing 40% of after-hours calls. Every missed call was a booked job going to a competitor.",
     built:
@@ -49,6 +53,7 @@ export const projects = [
     location: "Houston, USA",
     summary: "A serious, spec-led site for a heavy lift operator chasing enterprise RFPs.",
     tag: "Sample build" as const,
+    url: "https://carrymore-cranes.lovable.app",
     challenge:
       "Procurement teams couldn't find load charts, fleet specs, or insured-lift documentation. Quote requests came in vague and unqualified.",
     built:
@@ -56,6 +61,42 @@ export const projects = [
     timeline: "72 hours",
     outcome:
       "Sample build engineered for B2B credibility — heavyweight typography, real specs, and an inbox of qualified, pre-scoped projects.",
+  },
+  {
+    slug: "abuja-city-walk",
+    name: "Abuja City Walk",
+    image: abuja,
+    category: "Lifestyle Website",
+    industry: "Retail / lifestyle destination",
+    location: "Abuja, Nigeria",
+    summary: "An editorial site for a flagship retail and lifestyle district.",
+    tag: "Live" as const,
+    url: "https://abujacitywalk.com",
+    challenge:
+      "A destination brand with no central digital identity — visitors, retailers, and event partners all landed in different places.",
+    built:
+      "An editorial, image-led website unifying the brand: tenants, events, visitor info and partnerships, with a content system the in-house team can run.",
+    timeline: "Shipped",
+    outcome:
+      "Live site presenting the destination at the level of its physical experience — confident, calm, and credible.",
+  },
+  {
+    slug: "goedmo",
+    name: "Goedmo",
+    image: goedmo,
+    category: "Brand Website",
+    industry: "Digital services",
+    location: "Live",
+    summary: "A confident, dark-mode brand site for a modern digital services studio.",
+    tag: "Live" as const,
+    url: "https://goedmo.com",
+    challenge:
+      "A capable team without a website that matched the work — losing inbound to competitors that simply looked sharper.",
+    built:
+      "A dark, editorial brand site with clear service architecture, case-study scaffolding and a CTA path engineered for qualified inbound.",
+    timeline: "Shipped",
+    outcome:
+      "Live brand site that finally matches the quality of the team behind it.",
   },
 ] as const;
 
