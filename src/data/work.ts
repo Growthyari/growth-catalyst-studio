@@ -1,0 +1,116 @@
+import smile from "@/assets/work-smile-district.jpg";
+import peak from "@/assets/work-peak-home.jpg";
+import carry from "@/assets/work-carrymore.jpg";
+import voice from "@/assets/voice-agent-demo.jpg";
+import auto from "@/assets/automation-flow.jpg";
+import bd from "@/assets/bd-pipeline.jpg";
+
+export const projects = [
+  {
+    slug: "smile-district",
+    name: "Smile District Dental",
+    image: smile,
+    category: "AI Website",
+    industry: "Dental clinic",
+    location: "London, UK",
+    summary: "A clean, conversion-first dental site with online booking and AI follow-up.",
+    tag: "Sample build" as const,
+    challenge:
+      "An outdated clinic site that buried booking three clicks deep and lost a third of mobile visitors before the first scroll.",
+    built:
+      "Editorial-style website rebuilt in 72 hours with an AI scheduling assistant, treatment pages mapped to local search intent, and an automated reminder flow that nudges no-shows back into the calendar.",
+    timeline: "72 hours",
+    outcome:
+      "Sample build demonstrating booking-led architecture, content built for local SEO, and a measurable lift in qualified booking forms.",
+  },
+  {
+    slug: "peak-home",
+    name: "Peak Home Services",
+    image: peak,
+    category: "AI Website + Voice",
+    industry: "Home services",
+    location: "Toronto, Canada",
+    summary: "A trades-friendly website with 24/7 voice agent answering missed calls.",
+    tag: "Sample build" as const,
+    challenge:
+      "A four-truck plumbing & HVAC operator missing 40% of after-hours calls. Every missed call was a booked job going to a competitor.",
+    built:
+      "Service-led site with location-based landing pages, an AI voice receptionist that answers in under two rings, qualifies the job, and books straight into the calendar.",
+    timeline: "72 hours",
+    outcome:
+      "Sample build showing how a small operator can run like a national brand — every call captured, qualified, and booked without growing the back office.",
+  },
+  {
+    slug: "carrymore",
+    name: "Carrymore Cranes",
+    image: carry,
+    category: "Industrial Website",
+    industry: "Heavy industrial",
+    location: "Houston, USA",
+    summary: "A serious, spec-led site for a heavy lift operator chasing enterprise RFPs.",
+    tag: "Sample build" as const,
+    challenge:
+      "Procurement teams couldn't find load charts, fleet specs, or insured-lift documentation. Quote requests came in vague and unqualified.",
+    built:
+      "A dense, spec-first website with downloadable fleet sheets, an RFP intake that pre-qualifies the lift, and an internal automation that routes leads to the right project manager within minutes.",
+    timeline: "72 hours",
+    outcome:
+      "Sample build engineered for B2B credibility — heavyweight typography, real specs, and an inbox of qualified, pre-scoped projects.",
+  },
+] as const;
+
+export const demos = [
+  {
+    slug: "voice-agent",
+    name: "Voice Agent Demo",
+    image: voice,
+    category: "AI Voice",
+    industry: "Receptionist / lead qualification",
+    location: "Internal demo",
+    summary: "A live AI receptionist that answers, qualifies and books in under 90 seconds.",
+    tag: "Demo" as const,
+    challenge:
+      "Show how a founder-led service business can stop losing calls without hiring a receptionist.",
+    built:
+      "Always-on voice agent with branded greeting, scripted qualification, calendar booking, and a clean handover summary by SMS and email.",
+    timeline: "Live demo",
+    outcome:
+      "Internal proof of concept used on sales calls to show, not tell — prospects hear it answer in real time.",
+  },
+  {
+    slug: "automation-flow",
+    name: "Automation Workflow Sample",
+    image: auto,
+    category: "AI Automation",
+    industry: "Lead capture → follow-up",
+    location: "Internal demo",
+    summary: "Lead capture, qualification scoring and 14-day follow-up — fully automated.",
+    tag: "Sample build" as const,
+    challenge:
+      "Show what a founder's pipeline looks like when nothing falls through the cracks.",
+    built:
+      "Form → CRM → AI qualification → routed to founder or junior → multi-touch follow-up sequence that adapts to replies.",
+    timeline: "Sample build",
+    outcome:
+      "Sample system used in BD engagements as a starting blueprint for client builds.",
+  },
+  {
+    slug: "bd-system",
+    name: "BD System Sample",
+    image: bd,
+    category: "Business Development",
+    industry: "Outreach + pipeline",
+    location: "Internal demo",
+    summary: "ICP definition, outbound system and a pipeline board that actually moves.",
+    tag: "Sample build" as const,
+    challenge:
+      "Most founders run outbound on instinct. Show what a real system looks like.",
+    built:
+      "ICP framework, message tested across three angles, sending infrastructure, reply-handling SOP, and a kanban pipeline with clear stage exits.",
+    timeline: "Sample build",
+    outcome:
+      "Used as the BD consulting reference — clients leave with a working system, not a deck.",
+  },
+] as const;
+
+export type Project = (typeof projects)[number] | (typeof demos)[number];
