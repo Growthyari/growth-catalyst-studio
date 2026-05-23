@@ -76,9 +76,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "description", content: "AI websites, voice agents, automations and BD systems for founder-led businesses in the UK, USA and Canada. Shipped in 72 hours." },
       { name: "author", content: "GrowthYari Studio" },
       { property: "og:title", content: "GrowthYari Studio — More clients. Less chasing." },
-      { property: "og:description", content: "AI websites, voice agents, automations and BD systems. Founder-led. Shipped in 72 hours." },
+      { property: "og:description", content: "AI websites, voice agents, automations and BD systems for founder-led businesses in the UK, USA and Canada. Shipped in 72 hours." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
+      { name: "twitter:title", content: "GrowthYari Studio — More clients. Less chasing." },
+      { name: "twitter:description", content: "AI websites, voice agents, automations and BD systems for founder-led businesses in the UK, USA and Canada. Shipped in 72 hours." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/2b586961-f635-475e-8455-455974fa8bde/id-preview-66e0cc77--e58c7803-5bdb-4fd1-b812-bad87bcc591d.lovable.app-1779566977097.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/2b586961-f635-475e-8455-455974fa8bde/id-preview-66e0cc77--e58c7803-5bdb-4fd1-b812-bad87bcc591d.lovable.app-1779566977097.png" },
     ],
     links: [
       {
@@ -89,7 +93,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,ital@9..144,400;9..144,500;9..144,600;9..144,700;9..144,400,1;9..144,500,1&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap",
       },
     ],
   }),
