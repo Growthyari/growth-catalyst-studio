@@ -61,12 +61,10 @@ function ServicesPage() {
       <section className="pt-36 md:pt-48 pb-16 border-b hairline">
         <div className="container-editorial">
           <SectionLabel index="GY/Services">What we build</SectionLabel>
-          <h1 className="mt-8 text-6xl md:text-[10rem] leading-[0.9]">
-            Four services.<br />
-            One outcome:<br />
-            <span className="italic text-primary">growth.</span>
+          <h1 className="mt-10 text-6xl md:text-[8.5rem] leading-[0.95] max-w-[15ch]">
+            Four services. One outcome: <span className="serif-italic text-primary">growth.</span>
           </h1>
-          <p className="mt-10 max-w-2xl text-lg text-foreground/80">
+          <p className="mt-10 measure text-lg text-foreground/75 leading-relaxed">
             Every service ships as a working system in your business — not a deck, not a deliverable, not a Notion doc.
           </p>
         </div>
