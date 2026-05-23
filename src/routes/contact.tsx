@@ -64,6 +64,14 @@ function ContactPage() {
               >
                 akash@growthyari.com
               </a>
+              <a
+                href="https://www.linkedin.com/in/akash-growthyari/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-3 inline-flex items-center gap-1 text-lg text-primary hover:underline"
+              >
+                LinkedIn ↗
+              </a>
               <p className="mt-4 text-muted-foreground">
                 Akash Chaudhury · Founder<br />
                 Delhi, India · Serving UK, USA & Canada

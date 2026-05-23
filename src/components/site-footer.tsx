@@ -28,12 +28,20 @@ export function SiteFooter() {
               </Link>
             ))}
           </nav>
-          <div className="md:text-right">
+          <div className="md:text-right space-y-1">
             <a
               href="mailto:akash@growthyari.com"
-              className="text-sm text-night-foreground/90 hover:text-electric transition-colors"
+              className="block text-sm text-night-foreground/90 hover:text-electric transition-colors"
             >
               akash@growthyari.com
+            </a>
+            <a
+              href="https://www.linkedin.com/in/akash-growthyari/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block text-sm text-night-foreground/70 hover:text-electric transition-colors"
+            >
+              LinkedIn ↗
             </a>
           </div>
         </div>

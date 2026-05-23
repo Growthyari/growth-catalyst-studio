@@ -54,9 +54,19 @@ function AboutPage() {
                 The studio is built around three things: speed, clarity, and outcomes. Everything else is noise.
               </p>
             </div>
-            <a href="mailto:akash@growthyari.com" className="mt-10 inline-flex items-center gap-2 label-mono text-primary hover:underline">
-              akash@growthyari.com →
-            </a>
+            <div className="mt-10 flex flex-col gap-2">
+              <a href="mailto:akash@growthyari.com" className="inline-flex items-center gap-2 label-mono text-primary hover:underline">
+                akash@growthyari.com →
+              </a>
+              <a
+                href="https://www.linkedin.com/in/akash-growthyari/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 label-mono text-primary hover:underline"
+              >
+                LinkedIn ↗
+              </a>
+            </div>
           </div>
         </div>
       </Section>
