@@ -1,5 +1,3 @@
-import { Link } from "@tanstack/react-router";
-
 export interface WorkCardProps {
   image: string;
   name: string;
@@ -7,13 +5,16 @@ export interface WorkCardProps {
   location: string;
   summary: string;
   tag?: "Live" | "Sample build" | "Demo";
-  href?: string;
+  url?: string;
 }
 
-export function WorkCard({ image, name, category, location, summary, tag = "Live", href = "/work" }: WorkCardProps) {
+export function WorkCard({ image, name, category, location, summary, tag = "Live", url }: WorkCardProps) {
+  const external = Boolean(url);
   return (
-    <Link
-      to={href}
+    <a
+      href={url ?? "/work"}
+      target={external ? "_blank" : undefined}
+      rel={external ? "noopener noreferrer" : undefined}
       className="group block lift"
     >
       <div className="relative overflow-hidden rounded-sm bg-surface aspect-[4/3]">
@@ -29,20 +30,20 @@ export function WorkCard({ image, name, category, location, summary, tag = "Live
           {tag}
         </span>
       </div>
-      <div className="mt-5 flex items-start justify-between gap-6">
+      <div className="mt-6 flex items-start justify-between gap-6">
         <div>
-          <h3 className="text-2xl md:text-[28px] leading-tight">{name}</h3>
-          <p className="mt-2 text-sm text-muted-foreground">{summary}</p>
+          <h3 className="text-[26px] md:text-3xl leading-[1.05]">{name}</h3>
+          <p className="mt-3 text-[15px] text-muted-foreground measure-tight leading-relaxed">{summary}</p>
         </div>
-        <span className="shrink-0 mt-1 text-sm text-foreground/70 group-hover:text-primary transition-colors">
-          View →
+        <span className="shrink-0 mt-2 text-sm text-foreground/70 group-hover:text-primary transition-colors">
+          {external ? "Visit ↗" : "View →"}
         </span>
       </div>
-      <div className="mt-3 flex items-center gap-3 label-mono text-muted-foreground">
+      <div className="mt-4 flex items-center gap-3 label-mono text-muted-foreground">
         <span>{category}</span>
         <span className="h-1 w-1 rounded-full bg-muted-foreground/50" />
         <span>{location}</span>
       </div>
-    </Link>
+    </a>
   );
 }
