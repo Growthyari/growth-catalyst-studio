@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Section, SectionLabel } from "@/components/section";
 import { WorkCard } from "@/components/work-card";
 import { projects } from "@/data/work";
+import founderImg from "@/assets/founder-akash.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -247,7 +248,7 @@ function Index() {
           <div className="md:col-span-5">
             <div className="rounded-sm overflow-hidden bg-surface aspect-[4/5] max-w-md">
               <img
-                src={new URL("../assets/founder-akash.jpg", import.meta.url).href}
+                src={founderImg}
                 alt="Akash Chaudhury, founder of GrowthYari Studio"
                 loading="lazy"
                 width={1024}
