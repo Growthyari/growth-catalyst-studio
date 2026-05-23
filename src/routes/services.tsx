@@ -24,6 +24,7 @@ const services = [
   {
     n: "01",
     title: "AI Websites",
+    price: "From $1,500",
     intent: "Editorial sites built to convert.",
     body: "We design and ship founder-grade websites with AI built in — booking, chat, qualification, content. Built properly. Live in 72 hours.",
     bullets: ["Conversion-first architecture", "AI booking + qualification", "Local + intent SEO", "CMS you can actually run"],
@@ -32,6 +33,7 @@ const services = [
   {
     n: "02",
     title: "AI Voice Agents",
+    price: "From $749/mo",
     intent: "Every call answered. 24/7. On brand.",
     body: "An AI receptionist that picks up in under two rings, qualifies the lead, books the calendar, and hands you a clean summary. Sounds like your team — on its best day.",
     bullets: ["Branded voice + scripts", "Live qualification", "Calendar + CRM booking", "SMS + email summaries"],
@@ -40,6 +42,7 @@ const services = [
   {
     n: "03",
     title: "AI Automation",
+    price: "Custom quote",
     intent: "Nothing falls through the cracks.",
     body: "Lead capture, scoring, routing and multi-touch follow-up — all working while you sleep. We build the system, plug it into your stack, and hand you the keys.",
     bullets: ["Form → CRM → routing", "AI qualification + scoring", "14-day adaptive follow-up", "Internal SOPs documented"],
@@ -48,6 +51,7 @@ const services = [
   {
     n: "04",
     title: "Business Development Consultation",
+    price: "From $500/session",
     intent: "Pipeline that actually moves.",
     body: "ICP definition, message testing, outbound infrastructure and a pipeline you can read on a Monday morning. Founder-to-founder. No retainers without traction.",
     bullets: ["ICP + message frameworks", "Outbound infrastructure", "Pipeline + reporting", "Reply-handling SOP"],
@@ -80,6 +84,7 @@ function ServicesPage() {
               <div className="md:col-span-5">
                 <SectionLabel index={s.n}>Service</SectionLabel>
                 <h2 className="mt-6 text-5xl md:text-7xl leading-[0.95]">{s.title}</h2>
+                <p className="mt-4 label-mono text-primary">{s.price}</p>
                 <p className="mt-6 text-xl text-foreground/80">{s.intent}</p>
               </div>
               <div className="md:col-span-7 md:pl-10 md:border-l hairline">

@@ -21,10 +21,10 @@ export const Route = createFileRoute("/")({
 });
 
 const services = [
-  { n: "01", title: "AI Websites", copy: "Editorial sites built to convert. Shipped in 72 hours." },
-  { n: "02", title: "AI Voice Agents", copy: "Answer every call in under two rings. 24/7. On brand." },
-  { n: "03", title: "AI Automation", copy: "Lead capture, qualification, follow-up — nothing falls through." },
-  { n: "04", title: "BD Consultation", copy: "ICP, outreach and pipeline systems that actually move." },
+  { n: "01", title: "AI Websites", price: "From $1,500", copy: "Editorial sites built to convert. Shipped in 72 hours." },
+  { n: "02", title: "AI Voice Agents", price: "From $749/mo", copy: "Answer every call in under two rings. 24/7. On brand." },
+  { n: "03", title: "AI Automation", price: "Custom quote", copy: "Lead capture, qualification, follow-up — nothing falls through." },
+  { n: "04", title: "BD Consultation", price: "From $500/session", copy: "ICP, outreach and pipeline systems that actually move." },
 ];
 
 const steps = [
@@ -192,6 +192,7 @@ function Index() {
             >
               <span className="label-mono text-muted-foreground">{s.n}</span>
               <h3 className="text-[28px] md:text-[34px] leading-tight">{s.title}</h3>
+              <p className="label-mono text-primary">{s.price}</p>
               <p className="text-foreground/70 leading-relaxed">{s.copy}</p>
               <span className="mt-auto label-mono text-foreground/70 group-hover:text-primary transition-colors">Read more →</span>
             </Link>
