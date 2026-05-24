@@ -262,6 +262,9 @@ function Index() {
             <p className="mt-6 text-lg text-foreground/75 measure leading-relaxed">
               Every brief is read by the founder. Every build is shipped by the founder. That's the entire promise — and it's the reason things actually ship in 72 hours.
             </p>
+            <p className="mt-6 text-lg text-foreground/75 measure leading-relaxed">
+              Based in Delhi. Working UK and US hours. Always reachable on WhatsApp and email — replied to within 4 hours.
+            </p>
             <Link
               to="/about"
               className="mt-8 inline-flex items-center gap-2 label-mono text-primary hover:underline"
@@ -272,16 +275,133 @@ function Index() {
         </div>
       </Section>
 
+      {/* PRICING */}
+      <Section className="border-t hairline">
+        <div className="text-center max-w-2xl mx-auto">
+          <SectionLabel index="GY/07">Pricing</SectionLabel>
+          <h2 className="mt-6 text-5xl md:text-[5.5rem] leading-[0.95]">
+            What this <span className="serif-italic text-primary">costs.</span>
+          </h2>
+          <p className="mt-6 text-lg text-foreground/75 leading-relaxed">
+            Fixed prices. No surprises. You know everything before we start.
+          </p>
+        </div>
+
+        <div className="mt-16 grid md:grid-cols-3 gap-6">
+          {[
+            {
+              title: "AI Website",
+              price: "$1,499",
+              label: "one-time",
+              meta: "Delivered in 72 hours",
+              features: [
+                "5 fully designed pages",
+                "Mobile responsive",
+                "SEO foundations",
+                "Booking or enquiry form",
+                "Deployed on your domain",
+              ],
+              cta: "Get my site built →",
+              highlight: false,
+            },
+            {
+              title: "AI Voice Agent",
+              price: "$749",
+              priceSuffix: " one-time",
+              monthly: "+ $499/month",
+              label: "setup + monthly",
+              meta: "Most teams go live in a week",
+              features: [
+                "Custom-trained AI agent",
+                "Dedicated phone number",
+                "24/7 active — never misses a call",
+                "Monthly transcripts and reports",
+                "Ongoing optimisation",
+              ],
+              cta: "Build my voice agent →",
+              highlight: true,
+            },
+            {
+              title: "BD Consulting",
+              price: "$499",
+              priceSuffix: "/month",
+              label: "monthly rolling",
+              meta: "Cancel anytime",
+              features: [
+                "ICP definition and prospect lists",
+                "LinkedIn and email outreach sequences",
+                "Weekly 30-min pipeline review call",
+                "Live tracking dashboard",
+                "Cancel anytime",
+              ],
+              cta: "Start growing →",
+              highlight: false,
+            },
+          ].map((c) => (
+            <div
+              key={c.title}
+              className={`relative rounded-sm border hairline p-8 md:p-10 flex flex-col ${
+                c.highlight ? "bg-night text-night-foreground border-night" : "bg-paper"
+              }`}
+            >
+              {c.highlight ? (
+                <span className="absolute -top-3 left-1/2 -translate-x-1/2 label-mono bg-electric text-night px-3 py-1 rounded-full">
+                  Most popular
+                </span>
+              ) : null}
+              <h3 className="text-3xl md:text-4xl">{c.title}</h3>
+              <p className={`mt-2 label-mono ${c.highlight ? "text-night-foreground/60" : "text-muted-foreground"}`}>
+                {c.label}
+              </p>
+              <div className="mt-8 flex items-baseline gap-1">
+                <span className="font-display text-5xl md:text-6xl">{c.price}</span>
+                {c.priceSuffix ? <span className="text-lg opacity-70">{c.priceSuffix}</span> : null}
+              </div>
+              {c.monthly ? (
+                <p className={`mt-2 ${c.highlight ? "text-night-foreground/80" : "text-foreground/80"}`}>
+                  {c.monthly}
+                </p>
+              ) : null}
+              <p className={`mt-4 text-sm ${c.highlight ? "text-night-foreground/60" : "text-muted-foreground"}`}>
+                {c.meta}
+              </p>
+              <ul className="mt-8 space-y-3 flex-1">
+                {c.features.map((f) => (
+                  <li key={f} className="flex items-start gap-3">
+                    <span className={`mt-2 inline-block h-1 w-3 shrink-0 ${c.highlight ? "bg-electric" : "bg-primary"}`} />
+                    <span className={c.highlight ? "text-night-foreground/90" : "text-foreground/85"}>{f}</span>
+                  </li>
+                ))}
+              </ul>
+              <Link
+                to="/contact"
+                className={`mt-10 inline-flex items-center justify-center gap-2 rounded-sm px-6 py-4 font-medium transition-colors ${
+                  c.highlight
+                    ? "bg-electric text-night hover:bg-paper"
+                    : "bg-foreground text-background hover:bg-primary"
+                }`}
+              >
+                {c.cta}
+              </Link>
+            </div>
+          ))}
+        </div>
+
+        <p className="mt-12 text-center text-sm text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          All prices in GBP. USD equivalent available on request. 50% deposit to start. 50% on delivery. Monthly services cancel anytime.
+        </p>
+      </Section>
+
       {/* CLOSING CTA */}
       <section className="bg-night text-night-foreground">
         <div className="container-editorial py-24 md:py-36 text-center">
-          <SectionLabel index="GY/07" dark><span className="md:mx-auto">Ready when you are</span></SectionLabel>
+          <SectionLabel index="GY/08" dark><span className="md:mx-auto">Ready when you are</span></SectionLabel>
           <h2 className="mt-10 text-6xl md:text-[8rem] leading-[0.95]">
             Let's ship<br />
             <span className="serif-italic text-electric">something real.</span>
           </h2>
-          <p className="mt-8 max-w-xl mx-auto text-night-foreground/70 leading-relaxed">
-            First call is free. No pitch. Just strategy. If we're a fit, we start the 72-hour clock.
+          <p className="mt-8 max-w-2xl mx-auto text-night-foreground/70 leading-relaxed">
+            Free 30-minute call. You describe the problem. We tell you exactly what we'd build and what it costs. No pitch. No obligation. If we're a fit, the 72-hour clock starts that same day.
           </p>
           <Link
             to="/contact"
