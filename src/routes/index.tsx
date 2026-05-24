@@ -21,10 +21,10 @@ export const Route = createFileRoute("/")({
 });
 
 const services = [
-  { n: "01", title: "AI Websites", price: "From $1,500", copy: "Editorial sites built to convert. Shipped in 72 hours." },
-  { n: "02", title: "AI Voice Agents", price: "From $749/mo", copy: "Answer every call in under two rings. 24/7. On brand." },
-  { n: "03", title: "AI Automation", price: "Custom quote", copy: "Lead capture, qualification, follow-up — nothing falls through." },
-  { n: "04", title: "BD Consultation", price: "From $500/session", copy: "ICP, outreach and pipeline systems that actually move." },
+  { n: "01", title: "AI Websites", price: "From $1,499", copy: "A website that earns its keep. 5 pages. Mobile. SEO. Booking form. Live in 72 hours." },
+  { n: "02", title: "AI Voice Agents", price: "From $749/month", copy: "Every call answered. Always. AI receptionist trained for your business. Books, qualifies, reports." },
+  { n: "03", title: "AI Automation", price: "From $749/month", copy: "No lead falls through. Capture, qualify, and follow up automatically." },
+  { n: "04", title: "BD Consultation", price: "From $1,499/month", copy: "A pipeline you can count on. Prospect lists, outreach sequences, weekly pipeline calls." },
 ];
 
 const steps = [
@@ -38,20 +38,20 @@ const testimonials = [
   {
     quote:
       "Akash rebuilt our site, plugged in a voice agent, and we stopped losing after-hours calls inside a week.",
-    name: "Operations lead",
-    role: "Home services, Toronto",
+    name: "Operations director",
+    role: "HVAC company · Manchester, UK",
   },
   {
     quote:
       "We finally have a pipeline I can look at on a Monday morning and know exactly what to do.",
     name: "Founder",
-    role: "B2B services, London",
+    role: "B2B services · London, UK",
   },
   {
     quote:
       "Shipped in three days, looks like it took three months. The booking flow speaks for itself.",
-    name: "Clinic owner",
-    role: "Dental, UK",
+    name: "Practice owner",
+    role: "Dental clinic · South West, UK",
   },
 ];
 
