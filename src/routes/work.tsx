@@ -51,7 +51,7 @@ function WorkPage() {
           <div className="container-editorial py-20 md:py-28">
             <div className="grid md:grid-cols-12 gap-10 items-start">
               <div className="md:col-span-7 order-2 md:order-1">
-                <SectionLabel index={`0${i + 1}`}>{p.tag}</SectionLabel>
+                <SectionLabel index={`0${i + 1}`}>{p.tag ?? "Case study"}</SectionLabel>
                 <h2 className="mt-6 text-5xl md:text-[4.5rem] leading-[0.98] max-w-[16ch]">{p.name}</h2>
                 <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 label-mono text-muted-foreground">
                   <span>{p.industry}</span>
@@ -100,7 +100,7 @@ function WorkPage() {
                   </div>
                   <div className="p-5 flex items-center justify-between border-t hairline">
                     <span className="label-mono text-muted-foreground">{p.category}</span>
-                    <span className="label-mono text-primary">{p.tag}</span>
+                    {p.tag ? <span className="label-mono text-primary">{p.tag}</span> : null}
                   </div>
                 </div>
               </div>

@@ -8,7 +8,7 @@ export interface WorkCardProps {
   url?: string;
 }
 
-export function WorkCard({ image, name, category, location, summary, tag = "Live", url }: WorkCardProps) {
+export function WorkCard({ image, name, category, location, summary, tag, url }: WorkCardProps) {
   const external = Boolean(url);
   return (
     <a
@@ -26,9 +26,11 @@ export function WorkCard({ image, name, category, location, summary, tag = "Live
           height={896}
           className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
         />
-        <span className="absolute left-4 top-4 label-mono rounded-full bg-paper/95 px-3 py-1 text-foreground">
-          {tag}
-        </span>
+        {tag ? (
+          <span className="absolute left-4 top-4 label-mono rounded-full bg-paper/95 px-3 py-1 text-foreground">
+            {tag}
+          </span>
+        ) : null}
       </div>
       <div className="mt-6 flex items-start justify-between gap-6">
         <div>
