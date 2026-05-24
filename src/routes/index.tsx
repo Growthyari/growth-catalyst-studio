@@ -72,7 +72,11 @@ function Index() {
           </h1>
           <div className="mt-14 grid gap-10 md:grid-cols-12 fade-up fade-up-delay-2">
             <p className="md:col-span-7 text-lg md:text-xl text-foreground/75 measure leading-[1.55]">
-              We build AI websites, voice agents, automations and business development systems for founder-led businesses in the UK, USA and Canada — shipped fast, built properly, and designed to convert.
+              Your competitors are getting the customers you should be getting — because they have a website that works and yours doesn't.
+              <br /><br />
+              We fix that in 72 hours.
+              <br />
+              Serving UK, USA and Canada.
             </p>
             <div className="md:col-span-5 md:justify-self-end flex flex-col gap-3">
               <Link
@@ -96,7 +100,7 @@ function Index() {
           <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-px bg-hairline border hairline rounded-sm overflow-hidden fade-up fade-up-delay-3">
             {[
               { k: "72hr", v: "Website delivery" },
-              { k: "1", v: "Founder-led execution" },
+              { k: "6", v: "Live client sites" },
               { k: "UK · US · CA", v: "Markets we serve" },
               { k: "Live", v: "Systems and demos" },
             ].map((t) => (
