@@ -110,7 +110,7 @@ function ServicesPage() {
                         <div className="p-5">
                           <div className="flex items-center justify-between gap-3">
                             <h4 className="text-lg font-display">{p.name}</h4>
-                            <span className="label-mono text-muted-foreground">{p.tag}</span>
+                            {p.tag ? <span className="label-mono text-muted-foreground">{p.tag}</span> : null}
                           </div>
                           <p className="mt-2 text-sm text-foreground/75">{p.summary}</p>
                           <p className="mt-3 label-mono text-muted-foreground">Outcome: {p.category}</p>
