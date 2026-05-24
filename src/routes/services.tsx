@@ -24,8 +24,8 @@ const services = [
   {
     n: "01",
     title: "AI Websites",
-    price: "From $1,500",
-    intent: "Editorial sites built to convert.",
+    price: "From $1,499",
+    intent: "A website that earns its keep. 5 pages. Mobile. SEO. Booking form. Live in 72 hours.",
     body: "We design and ship founder-grade websites with AI built in — booking, chat, qualification, content. Built properly. Live in 72 hours.",
     bullets: ["Conversion-first architecture", "AI booking + qualification", "Local + intent SEO", "CMS you can actually run"],
     proofs: [smile, peak],
@@ -33,8 +33,8 @@ const services = [
   {
     n: "02",
     title: "AI Voice Agents",
-    price: "From $749/mo",
-    intent: "Every call answered. 24/7. On brand.",
+    price: "From $749/month",
+    intent: "Every call answered. Always. AI receptionist trained for your business. Books, qualifies, reports.",
     body: "An AI receptionist that picks up in under two rings, qualifies the lead, books the calendar, and hands you a clean summary. Sounds like your team — on its best day.",
     bullets: ["Branded voice + scripts", "Live qualification", "Calendar + CRM booking", "SMS + email summaries"],
     proofs: [voice],
@@ -42,8 +42,8 @@ const services = [
   {
     n: "03",
     title: "AI Automation",
-    price: "Custom quote",
-    intent: "Nothing falls through the cracks.",
+    price: "From $749/month",
+    intent: "No lead falls through. Capture, qualify, and follow up automatically.",
     body: "Lead capture, scoring, routing and multi-touch follow-up — all working while you sleep. We build the system, plug it into your stack, and hand you the keys.",
     bullets: ["Form → CRM → routing", "AI qualification + scoring", "14-day adaptive follow-up", "Internal SOPs documented"],
     proofs: [auto],
@@ -51,8 +51,8 @@ const services = [
   {
     n: "04",
     title: "Business Development Consultation",
-    price: "From $500/session",
-    intent: "Pipeline that actually moves.",
+    price: "From $1,499/month",
+    intent: "A pipeline you can count on. Prospect lists, outreach sequences, weekly pipeline calls.",
     body: "ICP definition, message testing, outbound infrastructure and a pipeline you can read on a Monday morning. Founder-to-founder. No retainers without traction.",
     bullets: ["ICP + message frameworks", "Outbound infrastructure", "Pipeline + reporting", "Reply-handling SOP"],
     proofs: [bd],
