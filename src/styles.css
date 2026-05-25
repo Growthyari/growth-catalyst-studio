@@ -241,4 +241,85 @@
   .marquee-track {
     animation: marquee 40s linear infinite;
   }
-}
+/* Pause marquee on hover */
+  .marquee-track:hover {
+    animation-play-state: paused;
+  }
+
+  /* Fade edges on marquee container */
+  .marquee-fade {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      black 8%,
+      black 92%,
+      transparent 100%
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      black 8%,
+      black 92%,
+      transparent 100%
+    );
+  }
+
+  /* Portfolio card hover */
+  .work-card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .work-card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 48px rgba(0,0,0,0.10);
+  }
+
+  /* Button arrow nudge */
+  .arrow-nudge {
+    display: inline-block;
+    transition: transform 0.2s ease;
+  }
+  a:hover .arrow-nudge,
+  button:hover .arrow-nudge {
+    transform: translateX(4px);
+  }
+
+  /* Cursor spotlight */
+  .spotlight-section {
+    position: relative;
+    overflow: hidden;
+  }
+  .spotlight-section::before {
+    content: '';
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle,
+      rgba(67,56,202,0.07) 0%,
+      transparent 70%
+    );
+    transform: translate(
+      calc(var(--mx, 50%) - 300px),
+      calc(var(--my, 50%) - 300px)
+    );
+    pointer-events: none;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    transition: transform 0.08s ease;
+  }
+
+  /* Pricing highlight pulse */
+  @keyframes subtle-pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(67,56,202,0); }
+    50% { box-shadow: 0 0 0 6px rgba(67,56,202,0.08); }
+  }
+  .pricing-highlight {
+    animation: subtle-pulse 3s ease-in-out infinite;
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .fade-up { animation: none; opacity: 1; }
+    .marquee-track { animation-play-state: paused; }
+    * { transition-duration: 0.01ms !important; }
+  }}
