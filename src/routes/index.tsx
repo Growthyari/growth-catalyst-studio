@@ -114,7 +114,7 @@ function Index() {
       </section>
 
       {/* marquee */}
-      <div className="border-y hairline bg-paper py-5 overflow-hidden">
+      <div className="border-y hairline bg-paper py-5 overflow-hidden marquee-fade">
         <div className="flex gap-12 marquee-track whitespace-nowrap label-mono text-foreground/70">
           {Array.from({ length: 2 }).flatMap((_, i) =>
             [
@@ -341,7 +341,7 @@ function Index() {
             <div
               key={c.title}
               className={`relative rounded-sm border hairline p-8 md:p-10 flex flex-col ${
-                c.highlight ? "bg-night text-night-foreground border-night" : "bg-paper"
+                c.highlight ? "bg-night text-night-foreground border-night pricing-pulse" : "bg-paper"
               }`}
             >
               {c.highlight ? (
@@ -393,7 +393,7 @@ function Index() {
       </Section>
 
       {/* CLOSING CTA */}
-      <section className="bg-night text-night-foreground">
+      <section className="bg-night text-night-foreground grain">
         <div className="container-editorial py-24 md:py-36 text-center">
           <SectionLabel index="GY/08" dark><span className="md:mx-auto">Ready when you are</span></SectionLabel>
           <h2 className="mt-10 text-6xl md:text-[8rem] leading-[0.95]">
