@@ -10,11 +10,11 @@ const links = [
 
 export function SiteFooter() {
   return (
-    <footer className="bg-night text-night-foreground">
+    <footer className="text-night-foreground border-t border-[color:var(--gold)]" style={{ backgroundColor: "#111810" }}>
       <div className="container-editorial py-16">
         <div className="grid gap-10 md:grid-cols-3 md:items-center">
           <Link to="/" className="flex items-center gap-2">
-            <span className="inline-block h-2 w-2 rounded-full bg-electric" />
+            <span className="inline-block h-2 w-2 rounded-full bg-gold" />
             <span className="font-display text-xl">GY Studio</span>
           </Link>
           <nav className="flex flex-wrap items-center gap-x-6 gap-y-3 md:justify-center">
@@ -22,7 +22,7 @@ export function SiteFooter() {
               <Link
                 key={l.to}
                 to={l.to}
-                className="text-sm text-night-foreground/70 hover:text-night-foreground transition-colors"
+                className="text-sm text-white/60 hover:text-white transition-colors"
               >
                 {l.label}
               </Link>
@@ -31,7 +31,7 @@ export function SiteFooter() {
           <div className="md:text-right space-y-1">
             <a
               href="mailto:akash@growthyari.com"
-              className="block text-sm text-night-foreground/90 hover:text-electric transition-colors"
+              className="block text-sm text-gold hover:underline transition-colors"
             >
               akash@growthyari.com
             </a>
@@ -39,17 +39,17 @@ export function SiteFooter() {
               href="https://www.linkedin.com/in/akash-growthyari/"
               target="_blank"
               rel="noopener noreferrer"
-              className="block text-sm text-night-foreground/70 hover:text-electric transition-colors"
+              className="block text-sm text-gold/80 hover:text-gold transition-colors"
             >
               LinkedIn ↗
             </a>
           </div>
         </div>
         <div className="mt-12 border-t border-white/10 pt-6 flex flex-col md:flex-row gap-3 md:items-center md:justify-between">
-          <p className="text-xs text-night-foreground/50">
+          <p className="text-xs text-white/40">
             © 2026 GrowthYari Studio · Delhi, India · Serving UK, USA and Canada
           </p>
-          <p className="label-mono text-night-foreground/40">More clients. Less chasing.</p>
+          <p className="label-mono text-white/40">More clients. Less chasing.</p>
         </div>
       </div>
     </footer>
