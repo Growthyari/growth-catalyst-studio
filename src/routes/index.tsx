@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { Reveal, RevealStagger, CountUp } from "@/components/reveal";
 import { Section, SectionLabel } from "@/components/section";
 import { WorkCard } from "@/components/work-card";
 import { projects } from "@/data/work";
@@ -98,23 +99,25 @@ function Index() {
 
           {/* trust row */}
           <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-px bg-hairline border hairline rounded-sm overflow-hidden fade-up fade-up-delay-3">
-            {[
-              { k: "72hr", v: "Website delivery" },
-              { k: "6", v: "Live client sites" },
-              { k: "UK · US · CA", v: "Markets we serve" },
-              { k: "Live", v: "Systems and demos" },
-            ].map((t) => (
-              <div key={t.v} className="bg-paper p-6 md:p-8">
-                <p className="font-display text-3xl md:text-[2.5rem] leading-none">{t.k}</p>
-                <p className="mt-3 label-mono text-muted-foreground">{t.v}</p>
-              </div>
-            ))}
+           {[
+            { display: <CountUp target={72} suffix="hr" />, v: "Website delivery" },
+            { display: <CountUp target={6} />, v: "Live client sites" },
+            { display: <span>UK · US · CA</span>, v: "Markets we serve" },
+            { display: <span>Live</span>, v: "Systems and demos" },
+          ].map((t) => (
+            <div key={t.v} className="bg-paper p-6 md:p-8">
+              <p className="font-display text-3xl md:text-[2.5rem] leading-none">
+                {t.display}
+              </p>
+              <p className="mt-3 label-mono text-muted-foreground">{t.v}</p>
+            </div>
+          ))}
           </div>
         </div>
       </section>
 
       {/* marquee */}
-      <div className="border-y hairline bg-paper py-5 overflow-hidden">
+      <div className="border-y hairline bg-paper py-5 overflow-hidden marquee-fade">
         <div className="flex gap-12 marquee-track whitespace-nowrap label-mono text-foreground/70">
           {Array.from({ length: 2 }).flatMap((_, i) =>
             [
@@ -142,6 +145,7 @@ function Index() {
       {/* SELECTED WORK */}
       <Section>
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+         <Reveal>
           <div>
             <SectionLabel index="GY/02">Selected work</SectionLabel>
             <h2 className="mt-6 text-5xl md:text-[5.5rem] leading-[0.95] max-w-[14ch]">
@@ -150,6 +154,7 @@ function Index() {
               <span className="serif-italic text-muted-foreground">Live systems.</span>
             </h2>
           </div>
+           </Reveal>
           <Link to="/work" className="label-mono text-foreground/80 hover:text-primary transition-colors">
             All work →
           </Link>
@@ -393,7 +398,14 @@ function Index() {
       </Section>
 
       {/* CLOSING CTA */}
-      <section className="bg-night text-night-foreground">
+      <section
+  className="bg-night text-night-foreground spotlight-section"
+  onMouseMove={(e) => {
+    const r = e.currentTarget.getBoundingClientRect();
+    e.currentTarget.style.setProperty("--mx", `${e.clientX - r.left}px`);
+    e.currentTarget.style.setProperty("--my", `${e.clientY - r.top}px`);
+  }}
+>
         <div className="container-editorial py-24 md:py-36 text-center">
           <SectionLabel index="GY/08" dark><span className="md:mx-auto">Ready when you are</span></SectionLabel>
           <h2 className="mt-10 text-6xl md:text-[8rem] leading-[0.95]">
