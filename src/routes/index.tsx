@@ -55,58 +55,129 @@ const testimonials = [
   },
 ];
 
+const pricingCards = [
+  {
+    title: "AI Website",
+    price: "$1,499",
+    priceSuffix: undefined as string | undefined,
+    monthly: undefined as string | undefined,
+    label: "one-time",
+    meta: "Delivered in 72 hours",
+    features: [
+      "5 fully designed pages",
+      "Mobile responsive",
+      "SEO foundations",
+      "Booking or enquiry form",
+      "Deployed on your domain",
+    ],
+    cta: "Get my site built →",
+    highlight: false,
+  },
+  {
+    title: "AI Voice Agent",
+    price: "$749",
+    priceSuffix: " one-time",
+    monthly: "+ $499/month",
+    label: "setup + monthly",
+    meta: "Most teams go live in a week",
+    features: [
+      "Custom-trained AI agent",
+      "Dedicated phone number",
+      "24/7 active — never misses a call",
+      "Monthly transcripts and reports",
+      "Ongoing optimisation",
+    ],
+    cta: "Build my voice agent →",
+    highlight: true,
+  },
+  {
+    title: "BD Consulting",
+    price: "$499",
+    priceSuffix: "/month",
+    monthly: undefined as string | undefined,
+    label: "monthly rolling",
+    meta: "Cancel anytime",
+    features: [
+      "ICP definition and prospect lists",
+      "LinkedIn and email outreach sequences",
+      "Weekly 30-min pipeline review call",
+      "Live tracking dashboard",
+      "Cancel anytime",
+    ],
+    cta: "Start growing →",
+    highlight: false,
+  },
+];
+
 function Index() {
   return (
     <>
-      {/* HERO */}
-      <section className="relative pt-32 md:pt-40 pb-20 md:pb-28 overflow-hidden">
-        <div className="container-editorial">
-          <div className="fade-up">
-            <SectionLabel index="GY/01">Studio · Delhi → UK · USA · Canada</SectionLabel>
-          </div>
-          <h1 className="mt-10 max-w-[18ch] text-[12vw] sm:text-7xl md:text-[7.5rem] lg:text-[9rem] leading-[0.92] fade-up fade-up-delay-1">
-            More clients.
-            <br />
-            <span className="text-muted-foreground">Less </span>
-            <span className="serif-italic text-primary">chasing.</span>
-          </h1>
-          <div className="mt-14 grid gap-10 md:grid-cols-12 fade-up fade-up-delay-2">
-            <p className="md:col-span-7 text-lg md:text-xl text-foreground/75 measure leading-[1.55]">
-              Your competitors are getting the customers you should be getting — because they have a website that works and yours doesn't.
-              <br /><br />
-              We fix that in 72 hours.
-              <br />
-              Serving UK, USA and Canada.
-            </p>
-            <div className="md:col-span-5 md:justify-self-end flex flex-col gap-3">
-              <Link
-                to="/contact"
-                className="inline-flex items-center justify-between gap-6 rounded-sm bg-foreground px-6 py-4 text-base font-medium text-background hover:bg-primary transition-colors"
-              >
-                Book a 30-min call
-                <span>→</span>
-              </Link>
-              <Link
-                to="/work"
-                className="inline-flex items-center justify-between gap-6 rounded-sm border hairline px-6 py-4 text-base font-medium hover:border-foreground transition-colors"
-              >
-                See the work
-                <span>↗</span>
-              </Link>
+      {/* HERO — split layout */}
+      <section className="relative pt-24 md:pt-28 overflow-hidden">
+        <div className="grid md:grid-cols-[55fr_45fr] min-h-[88vh] md:min-h-[92vh]">
+          <div className="relative bg-paper flex items-center px-6 md:px-14 lg:px-20 py-16 md:py-20 md:border-r-2 md:border-[color:var(--gold)]">
+            <div className="w-full max-w-2xl">
+              <div className="fade-up">
+                <SectionLabel index="GY/01">Studio · Delhi → UK · USA · Canada</SectionLabel>
+              </div>
+              <h1 className="mt-8 text-[14vw] sm:text-6xl md:text-[5.25rem] lg:text-[7rem] leading-[0.98] fade-up fade-up-delay-1 font-display">
+                More clients.
+                <br />
+                Less <span className="serif-italic text-gold">chasing.</span>
+              </h1>
+              <p className="mt-10 text-lg md:text-xl text-foreground/75 measure leading-[1.55] fade-up fade-up-delay-2">
+                Your competitors are getting the customers you should be getting — because they have a website that works and yours doesn't.
+                <br /><br />
+                We fix that in 72 hours.
+                <br />
+                Serving UK, USA and Canada.
+              </p>
+              <div className="mt-10 flex flex-wrap gap-3 fade-up fade-up-delay-3">
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center justify-between gap-4 rounded-md bg-primary px-7 py-4 text-base font-medium text-white hover:bg-mid-green transition-colors"
+                >
+                  Book a 30-min call <span>→</span>
+                </Link>
+                <Link
+                  to="/work"
+                  className="inline-flex items-center justify-between gap-4 rounded-md border-2 border-primary px-7 py-4 text-base font-medium text-primary hover:bg-primary hover:text-white transition-colors"
+                >
+                  See the work <span>↗</span>
+                </Link>
+              </div>
             </div>
           </div>
+          <div className="relative min-h-[420px] md:min-h-0">
+            <img
+              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200&q=80"
+              alt="Professional business team meeting in warm office light"
+              className="absolute inset-0 h-full w-full object-cover"
+              loading="eager"
+            />
+            <div className="absolute inset-0" style={{ backgroundColor: "rgba(27,58,47,0.15)" }} />
+          </div>
+        </div>
+      </section>
 
-          {/* trust row */}
-          <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-px bg-hairline border hairline rounded-sm overflow-hidden fade-up fade-up-delay-3">
+      {/* Gold trust strip */}
+      <div className="bg-gold text-white text-center text-sm py-3 px-6 tracking-wide">
+        Trusted by businesses in Manchester · Austin · London · Abuja · Pan-India
+      </div>
+
+      {/* STATS BAR — forest green */}
+      <section className="bg-forest text-white">
+        <div className="container-editorial py-14 md:py-16">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-6 text-center md:text-left">
             {[
               { k: "72hr", v: "Website delivery" },
               { k: "6", v: "Live client sites" },
               { k: "UK · US · CA", v: "Markets we serve" },
               { k: "Live", v: "Systems and demos" },
             ].map((t) => (
-              <div key={t.v} className="bg-paper p-6 md:p-8">
-                <p className="font-display text-3xl md:text-[2.5rem] leading-none">{t.k}</p>
-                <p className="mt-3 label-mono text-muted-foreground">{t.v}</p>
+              <div key={t.v}>
+                <p className="font-display text-gold text-4xl md:text-5xl leading-none">{t.k}</p>
+                <p className="mt-3 label-mono text-white/70">{t.v}</p>
               </div>
             ))}
           </div>
@@ -114,26 +185,26 @@ function Index() {
       </section>
 
       {/* marquee */}
-      <div className="border-y hairline bg-paper py-5 overflow-hidden marquee-fade">
-        <div className="flex gap-12 marquee-track whitespace-nowrap label-mono text-foreground/70">
+      <div className="bg-surface py-5 overflow-hidden marquee-fade">
+        <div className="flex gap-12 marquee-track whitespace-nowrap label-mono text-primary">
           {Array.from({ length: 2 }).flatMap((_, i) =>
             [
               "AI Websites",
-              "·",
+              "•",
               "AI Voice Agents",
-              "·",
+              "•",
               "AI Automation",
-              "·",
+              "•",
               "Business Development",
-              "·",
+              "•",
               "Shipped in 72 hours",
-              "·",
+              "•",
               "Founder-led",
-              "·",
+              "•",
               "UK · USA · Canada",
-              "·",
+              "•",
             ].map((t, j) => (
-              <span key={`${i}-${j}`}>{t}</span>
+              <span key={`${i}-${j}`} className={t === "•" ? "text-gold" : ""}>{t}</span>
             )),
           )}
         </div>
@@ -150,11 +221,11 @@ function Index() {
               <span className="serif-italic text-muted-foreground">Live systems.</span>
             </h2>
           </div>
-          <Link to="/work" className="label-mono text-foreground/80 hover:text-primary transition-colors">
+          <Link to="/work" className="label-mono text-primary hover:text-gold transition-colors">
             All work →
           </Link>
         </div>
-        <div className="mt-16 grid gap-14 md:gap-16 md:grid-cols-2">
+        <div className="mt-16 grid gap-10 md:gap-8 md:grid-cols-2">
           {projects.slice(0, 4).map((p) => (
             <WorkCard
               key={p.slug}
@@ -169,40 +240,52 @@ function Index() {
           ))}
         </div>
         <div className="mt-12 text-center">
-          <Link to="/work" className="inline-flex items-center gap-2 label-mono text-primary hover:underline">
+          <Link to="/work" className="inline-flex items-center gap-2 label-mono text-gold hover:underline">
             See all 5 builds →
           </Link>
         </div>
       </Section>
 
       {/* SERVICES PREVIEW */}
-      <Section className="border-t hairline">
+      <Section className="bg-surface">
         <SectionLabel index="GY/03">What we build</SectionLabel>
         <div className="mt-10 grid md:grid-cols-12 gap-12 items-end">
           <h2 className="md:col-span-7 text-5xl md:text-[5.5rem] leading-[0.95]">
             Four services.<br />
-            One outcome: <span className="serif-italic text-primary">growth.</span>
+            One outcome: <span className="serif-italic text-gold">growth.</span>
           </h2>
           <div className="md:col-span-5 measure text-lg text-foreground/75 leading-relaxed">
             Each service is a working system. Not a deliverable. Not a deck. Something live, in your business, doing the job.
           </div>
         </div>
-        <div className="mt-16 grid md:grid-cols-2 gap-px bg-hairline border hairline rounded-sm overflow-hidden">
+        <div className="mt-16 grid md:grid-cols-2 gap-6">
           {services.map((s) => (
             <Link
               key={s.title}
               to="/services"
-              className="group bg-paper p-8 md:p-12 hover:bg-surface transition-colors flex flex-col gap-4"
+              className="group bg-white p-8 md:p-10 relative flex flex-col gap-4 rounded-md border-t-[3px] border-transparent hover:border-primary transition-all"
+              style={{ boxShadow: "0 2px 16px rgba(0,0,0,0.04)" }}
             >
-              <span className="label-mono text-muted-foreground">{s.n}</span>
+              <span className="font-display text-gold text-5xl md:text-6xl leading-none">{s.n}</span>
               <h3 className="text-[28px] md:text-[34px] leading-tight">{s.title}</h3>
-              <p className="label-mono text-primary">{s.price}</p>
+              <p className="label-mono text-gold">{s.price}</p>
               <p className="text-foreground/70 leading-relaxed">{s.copy}</p>
-              <span className="mt-auto label-mono text-foreground/70 group-hover:text-primary transition-colors">Read more →</span>
+              <span className="mt-auto label-mono text-primary group-hover:text-gold transition-colors">Read more →</span>
             </Link>
           ))}
         </div>
       </Section>
+
+      {/* Parallax image strip */}
+      <section
+        className="relative h-[280px] bg-fixed bg-center bg-cover flex items-center justify-center"
+        style={{ backgroundImage: "url(https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=80)" }}
+      >
+        <div className="absolute inset-0" style={{ backgroundColor: "rgba(27,58,47,0.6)" }} />
+        <h3 className="relative text-white serif-italic text-3xl md:text-5xl text-center px-6 max-w-3xl">
+          Built in Delhi. Trusted in the UK, USA and Canada.
+        </h3>
+      </section>
 
       {/* HOW IT WORKS */}
       <Section dark>
@@ -211,27 +294,40 @@ function Index() {
           From first call to live system.<br />
           <span className="serif-italic text-night-foreground/60">In days, not quarters.</span>
         </h2>
-        <div className="mt-16 grid md:grid-cols-4 gap-px bg-white/10 border border-white/10 rounded-sm overflow-hidden">
+        <div className="mt-16 grid md:grid-cols-4 gap-5">
           {steps.map((s) => (
-            <div key={s.n} className="bg-night p-8 md:p-10 flex flex-col gap-4">
-              <span className="label-mono text-electric">{s.n}</span>
-              <h3 className="text-2xl md:text-[26px] leading-tight">{s.title}</h3>
+            <div key={s.n} className="p-8 md:p-10 flex flex-col gap-4 rounded-md" style={{ backgroundColor: "#234A3D" }}>
+              <span className="font-display text-gold text-4xl leading-none">{s.n}</span>
+              <span className="block h-px w-12 bg-gold" />
+              <h3 className="text-2xl md:text-[26px] leading-tight text-white">{s.title}</h3>
               <p className="text-night-foreground/70 text-sm leading-relaxed">{s.copy}</p>
             </div>
           ))}
         </div>
       </Section>
 
+      {/* Testimonials banner image */}
+      <section
+        className="relative h-[200px] bg-center bg-cover flex items-center justify-center"
+        style={{ backgroundImage: "url(https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1600&q=80)" }}
+      >
+        <div className="absolute inset-0" style={{ backgroundColor: "rgba(27,58,47,0.5)" }} />
+        <h3 className="relative text-white serif-italic text-3xl md:text-4xl text-center px-6">
+          What founders say about working with us
+        </h3>
+      </section>
+
       {/* TESTIMONIALS */}
       <Section>
         <SectionLabel index="GY/05">Founder notes</SectionLabel>
-        <div className="mt-12 grid md:grid-cols-3 gap-8">
+        <div className="mt-12 grid md:grid-cols-3 gap-6">
           {testimonials.map((t, i) => (
-            <figure key={i} className="border-t hairline pt-8">
-              <blockquote className="serif-italic text-[26px] md:text-[28px] leading-[1.2] text-foreground">
-                “{t.quote}”
+            <figure key={i} className="bg-surface border border-[color:var(--gold)]/40 rounded-md p-8 pt-12 relative">
+              <span aria-hidden className="font-display text-gold absolute left-5 top-2 leading-none" style={{ fontSize: "80px" }}>“</span>
+              <blockquote className="serif-italic text-[22px] md:text-[24px] leading-[1.35] text-foreground">
+                {t.quote}
               </blockquote>
-              <figcaption className="mt-6 label-mono text-muted-foreground">
+              <figcaption className="mt-6 label-mono text-gold">
                 {t.name} · {t.role}
               </figcaption>
             </figure>
@@ -240,10 +336,10 @@ function Index() {
       </Section>
 
       {/* FOUNDER STRIP */}
-      <Section className="border-t hairline">
+      <Section className="bg-surface">
         <div className="grid md:grid-cols-12 gap-10 items-center">
           <div className="md:col-span-5">
-            <div className="rounded-sm overflow-hidden bg-surface aspect-[4/5] max-w-sm">
+            <div className="rounded-md overflow-hidden bg-paper aspect-[4/5] max-w-sm border-[3px] border-[color:var(--gold)]" style={{ boxShadow: "0 8px 32px rgba(0,0,0,0.12)" }}>
               <img
                 src={founderImg}
                 alt="Akash Chaudhury, founder of GrowthYari Studio"
@@ -265,9 +361,21 @@ function Index() {
             <p className="mt-6 text-lg text-foreground/75 measure leading-relaxed">
               Based in Delhi. Working UK and US hours. Always reachable on WhatsApp and email — replied to within 4 hours.
             </p>
+            <ul className="mt-8 space-y-2">
+              {[
+                "6 live client sites shipped",
+                "UK · US · Canada markets served",
+                "Replies within 4 hours guaranteed",
+              ].map((c) => (
+                <li key={c} className="label-mono text-foreground/80 flex items-center gap-3">
+                  <span className="inline-block h-1.5 w-1.5 rounded-full bg-gold" />
+                  {c}
+                </li>
+              ))}
+            </ul>
             <Link
               to="/about"
-              className="mt-8 inline-flex items-center gap-2 label-mono text-primary hover:underline"
+              className="mt-8 inline-flex items-center gap-2 label-mono text-gold underline underline-offset-4"
             >
               About the studio →
             </Link>
@@ -276,11 +384,11 @@ function Index() {
       </Section>
 
       {/* PRICING */}
-      <Section className="border-t hairline">
+      <Section>
         <div className="text-center max-w-2xl mx-auto">
           <SectionLabel index="GY/07">Pricing</SectionLabel>
           <h2 className="mt-6 text-5xl md:text-[5.5rem] leading-[0.95]">
-            What this <span className="serif-italic text-primary">costs.</span>
+            What this <span className="serif-italic text-gold">costs.</span>
           </h2>
           <p className="mt-6 text-lg text-foreground/75 leading-relaxed">
             Fixed prices. No surprises. You know everything before we start.
@@ -288,97 +396,50 @@ function Index() {
         </div>
 
         <div className="mt-16 grid md:grid-cols-3 gap-6">
-          {[
-            {
-              title: "AI Website",
-              price: "$1,499",
-              label: "one-time",
-              meta: "Delivered in 72 hours",
-              features: [
-                "5 fully designed pages",
-                "Mobile responsive",
-                "SEO foundations",
-                "Booking or enquiry form",
-                "Deployed on your domain",
-              ],
-              cta: "Get my site built →",
-              highlight: false,
-            },
-            {
-              title: "AI Voice Agent",
-              price: "$749",
-              priceSuffix: " one-time",
-              monthly: "+ $499/month",
-              label: "setup + monthly",
-              meta: "Most teams go live in a week",
-              features: [
-                "Custom-trained AI agent",
-                "Dedicated phone number",
-                "24/7 active — never misses a call",
-                "Monthly transcripts and reports",
-                "Ongoing optimisation",
-              ],
-              cta: "Build my voice agent →",
-              highlight: true,
-            },
-            {
-              title: "BD Consulting",
-              price: "$499",
-              priceSuffix: "/month",
-              label: "monthly rolling",
-              meta: "Cancel anytime",
-              features: [
-                "ICP definition and prospect lists",
-                "LinkedIn and email outreach sequences",
-                "Weekly 30-min pipeline review call",
-                "Live tracking dashboard",
-                "Cancel anytime",
-              ],
-              cta: "Start growing →",
-              highlight: false,
-            },
-          ].map((c) => (
+          {pricingCards.map((c) => (
             <div
               key={c.title}
-              className={`relative rounded-sm border hairline p-8 md:p-10 flex flex-col ${
-                c.highlight ? "bg-night text-night-foreground border-night pricing-pulse" : "bg-paper"
+              className={`relative rounded-md p-8 md:p-10 flex flex-col ${
+                c.highlight
+                  ? "bg-forest text-night-foreground border border-[color:var(--gold)] pricing-pulse"
+                  : "bg-white border border-[color:var(--hairline)]"
               }`}
             >
               {c.highlight ? (
-                <span className="absolute -top-3 left-1/2 -translate-x-1/2 label-mono bg-electric text-night px-3 py-1 rounded-full">
+                <span className="absolute -top-3 right-6 label-mono bg-gold text-white px-3 py-1 rounded-full">
                   Most popular
                 </span>
               ) : null}
               <h3 className="text-3xl md:text-4xl">{c.title}</h3>
-              <p className={`mt-2 label-mono ${c.highlight ? "text-night-foreground/60" : "text-muted-foreground"}`}>
+              <p className={`mt-2 label-mono ${c.highlight ? "text-white/60" : "text-muted-foreground"}`}>
                 {c.label}
               </p>
               <div className="mt-8 flex items-baseline gap-1">
-                <span className="font-display text-5xl md:text-6xl">{c.price}</span>
+                <span className="font-display text-gold text-5xl md:text-6xl">{c.price}</span>
                 {c.priceSuffix ? <span className="text-lg opacity-70">{c.priceSuffix}</span> : null}
               </div>
               {c.monthly ? (
-                <p className={`mt-2 ${c.highlight ? "text-night-foreground/80" : "text-foreground/80"}`}>
+                <p className={`mt-2 ${c.highlight ? "text-white/80" : "text-foreground/80"}`}>
                   {c.monthly}
                 </p>
               ) : null}
-              <p className={`mt-4 text-sm ${c.highlight ? "text-night-foreground/60" : "text-muted-foreground"}`}>
+              <p className={`mt-4 text-sm ${c.highlight ? "text-white/60" : "text-muted-foreground"}`}>
                 {c.meta}
               </p>
               <ul className="mt-8 space-y-3 flex-1">
                 {c.features.map((f) => (
                   <li key={f} className="flex items-start gap-3">
-                    <span className={`mt-2 inline-block h-1 w-3 shrink-0 ${c.highlight ? "bg-electric" : "bg-primary"}`} />
-                    <span className={c.highlight ? "text-night-foreground/90" : "text-foreground/85"}>{f}</span>
+                    <span className="mt-2 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
+                    <span className={c.highlight ? "text-white/90" : "text-foreground/85"}>{f}</span>
                   </li>
                 ))}
               </ul>
               <Link
                 to="/contact"
-                className={`mt-10 inline-flex items-center justify-center gap-2 rounded-sm px-6 py-4 font-medium transition-colors ${
+                className={`mt-10 inline-flex items-center justify-center gap-2 rounded-md px-6 py-4 font-medium transition-colors ${
                   c.highlight
-                    ? "bg-electric text-night hover:bg-paper"
-                    : "bg-foreground text-background hover:bg-primary"
+                    ? "bg-gold text-foreground hover:bg-white"
+                    : "bg-primary text-white hover:bg-mid-green"
                 }`}
               >
                 {c.cta}
@@ -392,20 +453,40 @@ function Index() {
         </p>
       </Section>
 
+      {/* Trust strip */}
+      <section className="bg-surface">
+        <div className="container-editorial py-10 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+          {[
+            { icon: "🔒", text: "Fixed price. No hidden fees." },
+            { icon: "⚡", text: "Live in 72 hours or we refund." },
+            { icon: "💬", text: "Direct WhatsApp access to Akash." },
+          ].map((t) => (
+            <div key={t.text} className="flex items-center justify-center gap-3">
+              <span className="text-2xl">{t.icon}</span>
+              <span className="text-foreground/80">{t.text}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* CLOSING CTA */}
-      <section className="bg-night text-night-foreground grain">
-        <div className="container-editorial py-24 md:py-36 text-center">
+      <section
+        className="relative text-night-foreground grain bg-center bg-cover"
+        style={{ backgroundImage: "url(https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=1600&q=80)" }}
+      >
+        <div className="absolute inset-0" style={{ backgroundColor: "rgba(27,58,47,0.92)" }} />
+        <div className="container-editorial py-24 md:py-36 text-center relative">
           <SectionLabel index="GY/08" dark><span className="md:mx-auto">Ready when you are</span></SectionLabel>
           <h2 className="mt-10 text-6xl md:text-[8rem] leading-[0.95]">
             Let's ship<br />
-            <span className="serif-italic text-electric">something real.</span>
+            <span className="serif-italic text-gold">something real.</span>
           </h2>
-          <p className="mt-8 max-w-2xl mx-auto text-night-foreground/70 leading-relaxed">
+          <p className="mt-8 max-w-2xl mx-auto text-white/75 leading-relaxed">
             Free 30-minute call. You describe the problem. We tell you exactly what we'd build and what it costs. No pitch. No obligation. If we're a fit, the 72-hour clock starts that same day.
           </p>
           <Link
             to="/contact"
-            className="mt-10 inline-flex items-center gap-3 rounded-sm bg-paper px-8 py-4 text-foreground font-medium hover:bg-electric hover:text-night transition-colors"
+            className="mt-10 inline-flex items-center gap-3 rounded-md bg-gold px-8 py-4 text-foreground font-medium hover:bg-white transition-colors"
           >
             Book a call
             <span>→</span>
